@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+div .Container {
+	border: 1px solid #dddddd;
+	margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+div .Top-Board {
+	width: 1080px;
+	text-align: center;
+	font-size: 40px;
+	line-height: 0%;
+	border: 1px solid #dddddd;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+div .Center-Board {
+	width: 1080px;
+	align-content: center;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+div .Botton-Board {
+	width: 1080px;
+	align-content: center;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+.List-Board {
+	width: 1080px;
+	height: 50px;
+	border-top: 1px solid #000000;
+	border-bottom:1px solid #000000;
+	border-collapse: collapse;
+	border-spacing: 1px;
+}
+
+.List-Board tr.List-top {
+	background-color: #ffffff;
+	text-align: center;
+	border-bottom:1px solid #eeeeee;
+	height: 40px;
+}
+
+.List-Board tr.List-middle {
+	background-color: #ffffff;
+	text-align: center;
+	border-top: 1px solid #eeeeee;
+	height: 40px
+}
+
+.board-btn {
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	padding:5px 16px;
+	text-decoration:none;
+	text-decoration: none;
+}
+.board-btn:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+	text-decoration: none;
+}
+.board-btn:active {
+	position:relative;
+	top:1px;
+	text-decoration: none;
+}
