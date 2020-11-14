@@ -7,32 +7,43 @@
 <head>
 <meta charset="UTF-8">
 <title>MBTI 게시판</title>
-<link rel="stylesheet" type="text/css" href="board.css">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://kit.fontawesome.com/e387ad5e3a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="./css/board.css">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
 <style type="text/css">
-a, a:hover {
-	color: #000000;
-}
-a {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
 </style>
 </head>
 <body>
 	<%
 		response.setCharacterEncoding("UTF-8");
-	PrintWriter script = response.getWriter();
-	String boardType = request.getParameter("mbti");
-	int pageNumber = 1;
-	if (request.getParameter("pageNumber") != null) {
-		pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+		PrintWriter script = response.getWriter();
+		String boardType = request.getParameter("mbti");
+		int pageNumber = 1;
+		if (request.getParameter("pageNumber") != null) {
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	}
 	%>
-	<nav style="border: 1px solid #dddddd;">
-		<h3 align="center">메뉴가 들어갈 곳</h3>
+	<!-- 상단 메뉴 -->
+	<nav class="navbar">
+		<div class="navbar__logo">
+			<i class="fab fa-monero"></i> <a href="">MBTI TOWN</a>
+		</div>
+
+		<ul class="navbar__menu">
+			<li><a href="main.jsp">#Main</a></li>
+			<li><a href="">#MBTI board</a></li>
+			<li><a href="">#Psychology</a></li>
+		</ul>
+
+		<ul class="navbar__user">
+			<li><i class="fas fa-user-check"></i></li>
+			<li>~님 환영합니다</li>
+		</ul>
 	</nav>
+	
+	<!-- 게시판 이름 및 특성 -->
 	<div class="Container">
 		<div class="Top-Board">
 			<h1><%=boardType%></h1>
@@ -123,6 +134,8 @@ a:hover {
 				}
 			%>
 		</div>
+		
+		<!-- 백앤드와 연동해서 게시글 출력 : 아직 미구현 예시만 있음 -->
 		<div class="Center-Board">
 			<table class="List-Board">
 				<thead>
@@ -137,14 +150,14 @@ a:hover {
 				<tbody>
 					<tr class="List-middle">
 						<td>1</td>
-						<td style="text-align: left; padding-left: 10px;"><a href="board_view.jsp?boardID=1">text제목</a></td>
+						<td style = "text-align: left; padding-left: 10px;"><a class = "board-title" href="board_view.jsp?boardID=1">text제목</a></td>
 						<td style="text-align: left; padding-left: 10px;">웹프</td>
 						<td>2020.11.14.</td>
 						<td>25</td>
 					</tr>
 					<tr class="List-middle">
 						<td>2</td>
-						<td style="text-align: left; padding-left: 10px;"><a href="board_view.jsp?boardID=1">text제목</a></td>
+						<td style = "text-align: left; padding-left: 10px;"><a class = "board-title" href="board_view.jsp?boardID=1">text제목</a></td>
 						<td style="text-align: left; padding-left: 10px;">웹프</td>
 						<td>2020.11.14.</td>
 						<td>25</td>
@@ -152,6 +165,8 @@ a:hover {
 				</tbody>
 			</table>
 		</div>
+		
+		<!-- 게시글 목록 밑  -->
 		<div class="Botton-Board">
 			<div style="float: left;">
 			<%

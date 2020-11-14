@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+/* 배경 색 지정 */
+body {
+	margin: 0;
+	background-color: #fafafa;
+	font-family: 'hanna';
+}
+
+/* 게시판 div 목록 1080px 기준 */
 
 div .Container {
 	border: 1px solid #dddddd;
@@ -31,11 +41,13 @@ div .Botton-Board {
 	margin-top: 5px;
 }
 
+/* 게시글 목록 table 속성 */
+
 .List-Board {
 	width: 1080px;
 	height: 50px;
 	border-top: 1px solid #000000;
-	border-bottom:1px solid #000000;
+	border-bottom: 1px solid #000000;
 	border-collapse: collapse;
 	border-spacing: 1px;
 }
@@ -43,7 +55,7 @@ div .Botton-Board {
 .List-Board tr.List-top {
 	background-color: #ffffff;
 	text-align: center;
-	border-bottom:1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
 	height: 40px;
 }
 
@@ -54,27 +66,41 @@ div .Botton-Board {
 	height: 40px
 }
 
+/* a 태그 속성 - 게시글 목록 안 글제목용 */
+
+.board-title {
+	color: #000000;
+	text-decoration: none;
+}
+
+.board-title:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+/* a 태그 속성 - 이전, 다음, 글쓰기 버튼용 */
+
 .board-btn {
-	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-	background-color:#f9f9f9;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:15px;
-	padding:5px 16px;
-	text-decoration:none;
+	background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: #000000;
+	font-size: 15px;
+	padding: 5px 16px;
 	text-decoration: none;
 }
+
 .board-btn:hover {
-	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-	background-color:#e9e9e9;
+	background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color: #e9e9e9;
 	text-decoration: none;
 }
+
 .board-btn:active {
-	position:relative;
-	top:1px;
+	position: relative;
+	top: 1px;
 	text-decoration: none;
 }
