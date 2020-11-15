@@ -10,6 +10,7 @@ body {
 
 /* 게시판 div 목록 1080px 기준 */
 div .Container {
+	width: 1080px;
 	border: 1px solid #dddddd;
 	margin: 0 auto;
 	margin-top: 5px;
@@ -49,6 +50,7 @@ div .Botton-Board {
 	border-bottom: 1px solid #000000;
 	border-collapse: collapse;
 	border-spacing: 1px;
+
 }
 
 .List-Board tr.List-top {
@@ -66,11 +68,12 @@ div .Botton-Board {
 }
 
 .write-board {
-	width: 1080px;
+	width: 1000px;
 	height: 50px;
 	border-bottom: 1px solid #000000;
 	border-collapse: collapse;
 	border-spacing: 1px;
+	margin: 0px auto;
 }
 
 .write-board tr.write-top {
@@ -143,11 +146,16 @@ div .Botton-Board {
 
 /* 글자 속성 - write 박스용 */
 
-.form-control {
-	width: 1000px;
+.form-write {
+	width: 1040px;
 	font-family: "맑은고딕", Malgun Gothic, dotum, gulim, sans-serif;
 	font-size: 15px;
 	padding: 10px 10px;
-	margin: 5px 5px;
+	margin: 5px 0px;
 	border: 1px solid #dcdcdc;
+	resize: none;
+}
+
+input[type=text] .form-write::-ms-clear {
+	display: none;
 }

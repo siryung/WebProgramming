@@ -9,7 +9,6 @@
 <title>MBTI 게시판</title>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://kit.fontawesome.com/e387ad5e3a.js"></script>
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" type="text/css" href="./css/board.css">
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
@@ -41,16 +40,16 @@
 	<!-- 게시판 이름과 글쓰기 Title -->
 	<div class="Container">
 		<!-- 글 제목, 글 내용 입력 table, from, input -->
-		<div class="Center-Board">
+		<div class="Center-Board" style="background-color: #ffffff; padding-top: 5px; padding-bottom: 5px; border-radius: 5px">
 		<form method="post" action="WriteAction.jsp">
-			<table class="write-board" style="margin-bottom: 5px;">
+			<table class="write-board">
 				<thead>
 					<tr class="write-top">
 						<th colspan="2" style="border-bottom: #000000;">
-							<div style="float:left; margin-left: 30px; padding: 10px 0px;">
-								<font style="font-size: 25px"><%=boardType %> 게시판 글쓰기</font>
+							<div style="float:left; margin-left: 0px; padding: 5px 0px;">
+								<font style="font-size: 32px"><%=boardType %> 게시판 글쓰기</font>
 							</div>
-							<div style="float: right; margin-right: 30px; padding: 10px 0px;">
+							<div style="float: right; margin-right: 0px; padding: 5px 0px;">
 								<input type="submit" class="write-btn" value="등록">
 								<input type="hidden" name = "mbti" value="<%=boardType %>">
 							</div>
@@ -59,10 +58,10 @@
 				</thead>
 				<tbody>
 					<tr class="write-middle" style="border-top: #000000;">
-						<td><input type="text" class="form-control" placeholder="글 제목" name="boardTitle" maxlength="50"></td>
+						<td><input type="text" class="form-write" placeholder="글 제목" name="boardTitle" maxlength="50"></td>
 					</tr>
 					<tr class="write-middle">
-						<td><textarea class="form-control" style = "overflow: hidden; height: 300px"placeholder="글 내용" name="boardContent" maxlength="1000" style="height: 350px"></textarea></td>
+						<td><textarea class="form-write" style = "overflow: hidden; height: 300px"placeholder="글 내용" name="boardContent" maxlength="1000" style="height: 350px"></textarea></td>
 					</tr>
 				</tbody>
 			</table>
