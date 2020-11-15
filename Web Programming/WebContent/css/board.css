@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
 /* 배경 색 지정 */
@@ -41,8 +42,39 @@ div .Botton-Board {
 	margin-top: 5px;
 }
 
-/* 게시글 목록 table 속성 */
+/* view 본문/댓글용 */
+div .form-view-body {
+	width: 1040px;
+	min-height: 200px;
+	margin: 10px auto;
+	font-size: 15px;
+	font-family: "맑은고딕", Malgun Gothic, dotum, gulim, sans-serif;
+	text-align: left;
+}
 
+div .form-view-ripple {
+	width: 1040px;
+	margin: 5px auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 15px;
+	font-family: "맑은고딕", Malgun Gothic, dotum, gulim, sans-serif;
+	text-align: left;
+	font-size: 15px;
+}
+
+div .input-ripple {
+	display: block;
+	width: 1060px;
+	margin: 5px auto;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid #A0A0A0;
+	font-family: "맑은고딕", Malgun Gothic, dotum, gulim, sans-serif;
+	text-align: left;
+}
+
+/* 게시글 목록 table 속성 */
 .List-Board {
 	width: 1080px;
 	height: 50px;
@@ -50,7 +82,6 @@ div .Botton-Board {
 	border-bottom: 1px solid #000000;
 	border-collapse: collapse;
 	border-spacing: 1px;
-
 }
 
 .List-Board tr.List-top {
@@ -67,9 +98,9 @@ div .Botton-Board {
 	height: 40px;
 }
 
+/* 게시글 쓰기 table 속성 */
 .write-board {
 	width: 1000px;
-	height: 50px;
 	border-bottom: 1px solid #000000;
 	border-collapse: collapse;
 	border-spacing: 1px;
@@ -80,18 +111,41 @@ div .Botton-Board {
 	background-color: #ffffff;
 	text-align: center;
 	border-bottom: 1px solid #000000;
-	height: 40px;
 }
 
 .write-board tr.write-middle {
 	background-color: #ffffff;
 	text-align: center;
 	border-top: 0px;
-	height: 40px;
+}
+
+/* 게시글 보기 table 속성 */
+.view-board {
+	width: 1000px;
+	border-collapse: collapse;
+	border-spacing: 1px;
+	margin: 0px auto;
+}
+
+.view-board tr.view-top {
+	background-color: #ffffff;
+	text-align: center;
+	border-bottom: 1px solid #000000;
+}
+
+.view-board tr.view-middle {
+	background-color: #ffffff;
+	text-align: center;
+	border-bottom: 1px solid #000000;
+}
+
+.view-board tr.view-bottom {
+	background-color: #ffffff;
+	text-align: center;
+	border-top: 1px solid #A0A0A0;
 }
 
 /* a 태그 속성 - 게시글 목록 안 글제목용 */
-
 .board-title {
 	color: #000000;
 	text-decoration: none;
@@ -102,8 +156,12 @@ div .Botton-Board {
 	text-decoration: underline;
 }
 
-/* a 태그 속성 - 이전, 다음, 글쓰기 버튼용 */
+.view-title, .view-title:hover {
+	color: #000000;
+	text-decoration: none;
+}
 
+/* a 태그 속성 - 이전, 다음, 글쓰기 버튼용 */
 .board-btn {
 	background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
 	background-color: #f9f9f9;
@@ -130,7 +188,6 @@ div .Botton-Board {
 }
 
 /* 글 등록 버튼용 */
-
 .write-btn {
 	background: #AECDFF;
 	background-color: #AECDFF;
@@ -145,7 +202,6 @@ div .Botton-Board {
 }
 
 /* 글자 속성 - write 박스용 */
-
 .form-write {
 	width: 1040px;
 	font-family: "맑은고딕", Malgun Gothic, dotum, gulim, sans-serif;
@@ -158,4 +214,20 @@ div .Botton-Board {
 
 input[type=text] .form-write::-ms-clear {
 	display: none;
+}
+
+.input-ripple textarea {
+	display: block;
+	width: 1040px;
+	font-family: "맑은고딕", Malgun Gothic, dotum, gulim, sans-serif;
+	font-size: 15px;
+	padding: 0px 10px;
+	margin-top: 10px;
+	border: 0px;
+	overflow: hidden;
+	resize: none;
+}
+
+.input-ripple textarea:focus {
+	outline: none;
 }

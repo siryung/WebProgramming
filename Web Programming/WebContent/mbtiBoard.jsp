@@ -2,26 +2,27 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter"%>
 <%@ page import="java.util.*"%>
+<%
+	response.setCharacterEncoding("UTF-8");
+	PrintWriter script = response.getWriter();
+	String boardType = request.getParameter("mbti");
+	int pageNumber = 1;
+	if (request.getParameter("pageNumber") != null) {
+		pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MBTI 게시판</title>
+<title><%=boardType%> 게시판</title>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://kit.fontawesome.com/e387ad5e3a.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/board.css">
 <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
-	<%
-		response.setCharacterEncoding("UTF-8");
-		PrintWriter script = response.getWriter();
-		String boardType = request.getParameter("mbti");
-		int pageNumber = 1;
-		if (request.getParameter("pageNumber") != null) {
-			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
-	}
-	%>
+
 	<!-- 상단 메뉴 -->
 	<nav class="navbar">
 		<div class="navbar__logo">
@@ -146,15 +147,15 @@
 				</thead>
 				<tbody>
 					<tr class="List-middle">
-						<td>1</td>
-						<td style = "text-align: left; padding-left: 10px;"><a class = "board-title" href="board_view.jsp?boardID=1">text제목</a></td>
+						<td>2</td>
+						<td style = "text-align: left; padding-left: 10px;"><a class = "board-title" href="boardView.jsp?mbti=<%=boardType%>&boardID=1">text제목</a></td>
 						<td style = "text-align: left; padding-left: 10px;">웹프</td>
 						<td>2020.11.14.</td>
 						<td>25</td>
 					</tr>
 					<tr class="List-middle">
-						<td>2</td>
-						<td style = "text-align: left; padding-left: 10px;"><a class = "board-title" href="board_view.jsp?boardID=1">text제목</a></td>
+						<td>1</td>
+						<td style = "text-align: left; padding-left: 10px;"><a class = "board-title" href="boardView.jsp?mbti=<%=boardType%>&boardID=2">text제목</a></td>
 						<td style="text-align: left; padding-left: 10px;">웹프</td>
 						<td>2020.11.14.</td>
 						<td>25</td>
